@@ -300,6 +300,13 @@ function todayStr() {
   return new Date().toISOString().slice(0,10);
 }
 
+function currentBucketSemaine(todayStr) {
+  for (const s of SEMAINES) { if (todayStr >= s.debut && todayStr <= s.fin) return s.id; }
+  const completed = SEMAINES.filter(s => s.fin < todayStr);
+  if (completed.length) return completed[completed.length-1].id;
+  return null;
+}
+
 function getScores(vendeurId, semaineId) {
   const vendeur = VENDEURS_INIT.find(v => v.id === vendeurId);
   const sem = SEMAINES.find(s => s.id === semaineId);
@@ -315,8 +322,9 @@ function getScores(vendeurId, semaineId) {
       const fin = snapshotAsOf(vendeur.nom, k.id, finEffective);
       scores[k.id] = Math.max(0, Math.round((fin - debut) * 10) / 10);
     } else {
-      // taux : pas de différence, valeur du moment
-      scores[k.id] = Math.round(snapshotAsOf(vendeur.nom, k.id, finEffective) * 10) / 10;
+      // taux : pas un cumul. On n'attribue la valeur qu'à la semaine "courante" (en cours, ou la plus récente terminée)
+      // pour éviter de la compter en double sur toutes les semaines à venir.
+      scores[k.id] = (semaineId === currentBucketSemaine(today)) ? Math.round(snapshotAsOf(vendeur.nom, k.id, finEffective) * 10) / 10 : 0;
     }
   });
   return scores;
