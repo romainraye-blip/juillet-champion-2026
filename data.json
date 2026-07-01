@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 01/07/2026 à 16:07 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 01/07/2026 17:19 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -152,11 +152,11 @@
         "accessoire": 12.84
       },
       "Emilie": {
-        "mobile": 2,
-        "g3a": 2,
+        "mobile": 3,
+        "g3a": 3,
         "assurance": 0,
-        "cyber": 0,
-        "accessoire": 43.06
+        "accessoire": 32.3,
+        "cyber": 0
       },
       "Nathan": {
         "mobile": 0,
