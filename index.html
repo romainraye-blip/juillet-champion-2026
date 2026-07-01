@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groupe Garcia — Juillet Champion 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+:root{--bg:#F0F2F5;--card:#FFF;--hdr:#0F172A;--txt:#0F1419;--sub:#64748B;--mut:#94A3B8;--brd:#E2E8F0;--blue:#2563EB;--purple:#7C3AED;--green:#059669;--orange:#D97706;--red:#DC2626;--cyan:#0891B2;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:var(--bg);color:var(--txt);font-size:13px;-webkit-font-smoothing:antialiased}
+.hdr{background:var(--hdr);color:#fff;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px;flex-wrap:wrap}
+.hdr-left{display:flex;align-items:center;gap:16px}
+.logo{font-size:16px;font-weight:800;letter-spacing:1px}.logo span{font-weight:400;opacity:.5;font-size:13px;margin-left:8px}
+.hdr-info{font-size:11px;color:#94A3B8}
+.nav{background:#fff;border-bottom:1px solid var(--brd);display:flex;overflow-x:auto;padding:0 16px;position:sticky;top:41px;z-index:99}
+.nav button{background:none;border:none;border-bottom:2px solid transparent;padding:10px 14px;font-family:inherit;font-size:12px;font-weight:600;color:var(--sub);cursor:pointer;white-space:nowrap;transition:all .15s}
+.nav button:hover{color:var(--txt)}.nav button.active{color:var(--blue);border-bottom-color:var(--blue)}
+.mn{max-width:1200px;margin:0 auto;padding:16px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media(max-width:900px){.g3,.g4,.g5{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.g2,.g3,.g4,.g5{grid-template-columns:1fr}}
+.cd{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:16px;position:relative;overflow:hidden}
+.cd.kpi{padding:14px 16px}
+.cd h3{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--sub);font-weight:700;margin-bottom:4px}
+.cd .val{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.cd .sub{font-size:11px;color:var(--sub);margin-top:2px}
+.cd .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:12px;margin-top:4px}
+.tag.green{background:#ECFDF5;color:var(--green)}.tag.red{background:#FEF2F2;color:var(--red)}.tag.orange{background:#FFFBEB;color:var(--orange)}.tag.blue{background:#EFF6FF;color:var(--blue)}
+.stitle{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--sub);margin:16px 0 10px;display:flex;align-items:center;gap:8px}
+.stitle::before{content:'';width:12px;height:2px;background:var(--blue);border-radius:2px}
+.cd canvas{max-height:220px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead th{text-align:left;padding:8px 10px;font-size:10px;font-weight:700;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--brd);white-space:nowrap}
+tbody td{padding:8px 10px;border-bottom:1px solid #F1F5F9;white-space:nowrap}
+tbody tr:hover{background:#F8FAFC}
+tbody tr:last-child td{border-bottom:none}
+.rk{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:10px;font-weight:700;color:#fff}
+.rk.g{background:linear-gradient(135deg,#FFD700,#FFA500)}.rk.s{background:linear-gradient(135deg,#C0C0C0,#A0A0A0)}.rk.b{background:linear-gradient(135deg,#CD7F32,#A0522D)}.rk.n{background:#E2E8F0;color:var(--sub)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+#splash{position:fixed;inset:0;z-index:9999;background:#0F172A;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s,visibility .6s}
+#splash.hide{opacity:0;visibility:hidden}
+.sp-logo{opacity:0;transform:translateY(20px);animation:spU .8s ease .2s forwards}
+.sp-logo-text{font-size:28px;font-weight:800;color:#fff;letter-spacing:2px;text-align:center}
+.sp-logo-sub{font-size:14px;color:#64748B;font-weight:500;margin-top:6px;text-align:center}
+.sp-line{width:0;height:2px;background:linear-gradient(90deg,#2563EB,#7C3AED);margin-top:24px;border-radius:2px;animation:spL 1.2s ease .6s forwards}
+.sp-kpis{display:flex;gap:32px;margin-top:28px;opacity:0;transform:translateY(12px);animation:spU .6s ease 1.2s forwards}
+.sp-kpi{text-align:center}.sp-kpi-val{font-size:22px;font-weight:800;color:#fff}.sp-kpi-label{font-size:10px;color:#64748B;text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+.sp-emoji{font-size:48px;margin-bottom:12px;animation:spU .8s ease 0s forwards;opacity:0;transform:translateY(20px)}
+@keyframes spU{to{opacity:1;transform:translateY(0)}}
+@keyframes spL{to{width:180px}}
+.hdr,.nav,.mn{opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.hdr.show,.nav.show,.mn.show{opacity:1;transform:translateY(0)}
+.ftr{text-align:center;font-size:11px;color:var(--sub);margin-top:20px;padding:12px;border-top:1px solid var(--brd)}
+@media print{.hdr,.nav{position:static}.mn{padding:8px}#splash{display:none}}
+
+/* Spécifique animation */
+.semaine-card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:16px;position:relative;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .15s}
+.semaine-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
+.semaine-card.active{border-color:var(--blue);box-shadow:0 0 0 2px #2563EB22}
+.semaine-card.done{border-color:var(--green)}
+.semaine-card.upcoming{opacity:.65}
+.semaine-card .sk-num{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sub);margin-bottom:4px}
+.semaine-card .sk-dates{font-size:11px;color:var(--mut);margin-bottom:8px}
+.semaine-card .sk-kpi-star{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue)}
+.semaine-card .sk-kpi-star .star-badge{background:#EFF6FF;color:var(--blue);font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;letter-spacing:.5px}
+.semaine-card .sk-status{font-size:10px;font-weight:700;padding:2px 8px;border-radius:12px;display:inline-block;margin-top:6px}
+.status-en-cours{background:#EFF6FF;color:var(--blue)}
+.status-termine{background:#ECFDF5;color:var(--green)}
+.status-a-venir{background:#F1F5F9;color:var(--sub)}
+.podium-wrap{display:flex;justify-content:center;align-items:flex-end;gap:12px;margin:20px 0 8px}
+.podium-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+.podium-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.podium-name{font-size:11px;font-weight:700;text-align:center}
+.podium-pts{font-size:10px;color:var(--sub);text-align:center}
+.podium-block{border-radius:8px 8px 0 0;width:70px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.podium-block.p1{height:80px;background:linear-gradient(135deg,#FFD700,#FFA500)}
+.podium-block.p2{height:60px;background:linear-gradient(135deg,#C0C0C0,#A0A0A0)}
+.podium-block.p3{height:45px;background:linear-gradient(135deg,#CD7F32,#A0522D)}
+.kpi-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
+.score-bar-wrap{display:flex;align-items:center;gap:8px;margin:3px 0}
+.score-bar-bg{flex:1;height:6px;background:#F1F5F9;border-radius:3px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:3px;transition:width .6s ease}
+.progress-ring{position:absolute;top:12px;right:12px;opacity:.08}
+.week-progress{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;border-radius:var(--r);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.week-progress .wk-label{font-size:12px;font-weight:700;opacity:.9}
+.week-progress .wk-val{font-size:22px;font-weight:800}
+.week-progress .wk-sub{font-size:10px;opacity:.75;margin-top:2px}
+.week-emoji{font-size:32px}
+.tab-content{display:none}.tab-content.active{display:block}
+.notice{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 14px;font-size:12px;color:var(--blue);margin-bottom:12px}
+.notice.sync{background:#ECFDF5;border-color:#A7F3D0;color:var(--green)}
+.src-row{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-bottom:1px solid #F1F5F9;font-size:12px}
+.src-row:last-child{border-bottom:none}
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="sp-emoji">⚽</div>
+  <div class="sp-logo">
+    <div class="sp-logo-text">JUILLET CHAMPION</div>
+    <div class="sp-logo-sub">Animation individuelle — Juillet 2026</div>
+  </div>
+  <div class="sp-line"></div>
+  <div class="sp-kpis">
+    <div class="sp-kpi"><div class="sp-kpi-val">5</div><div class="sp-kpi-label">Semaines</div></div>
+    <div class="sp-kpi"><div class="sp-kpi-val">5</div><div class="sp-kpi-label">KPIs</div></div>
+    <div class="sp-kpi"><div class="sp-kpi-val">🥇🥈🥉</div><div class="sp-kpi-label">Podium</div></div>
+  </div>
+</div>
+
+<div class="hdr" id="hdr">
+  <div class="hdr-left">
+    <div class="logo">GROUPE GARCIA <span>Juillet Champion 2026</span></div>
+    <div class="hdr-info">⚽ Animation individuelle — Juillet 2026</div>
+  </div>
+  <div class="hdr-info" id="hdr-date"></div>
+</div>
+
+<div class="nav" id="nav">
+  <button class="active" onclick="showTab('vue')">🏠 Vue d'ensemble</button>
+  <button onclick="showTab('classement')">🏆 Classement</button>
+  <button onclick="showTab('detail')">📊 Détail par semaine</button>
+  <button onclick="showTab('source')">🔄 Source & synchro</button>
+</div>
+
+<div class="mn" id="mn">
+
+  <!-- VUE D'ENSEMBLE -->
+  <div class="tab-content active" id="tab-vue">
+
+    <div class="notice sync" id="sync-notice">⚽ <strong>JUILLET CHAMPION</strong> — Données synchronisées automatiquement depuis 3GWIN toutes les 30 minutes. <span id="notice-lastupdate"></span></div>
+
+    <div class="stitle">Programme des semaines</div>
+    <div class="g5" id="semaines-cards"></div>
+
+    <div class="stitle" style="margin-top:20px">Podium provisoire</div>
+    <div class="g2">
+      <div class="cd">
+        <div id="podium-visual"></div>
+        <div style="text-align:center;font-size:11px;color:var(--sub);margin-top:4px">Classement mensuel cumulé</div>
+      </div>
+      <div class="cd">
+        <h3>Top 5 vendeurs</h3>
+        <table style="margin-top:8px">
+          <thead><tr><th>#</th><th>Vendeur</th><th style="text-align:right">Points</th></tr></thead>
+          <tbody id="top5-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CLASSEMENT -->
+  <div class="tab-content" id="tab-classement">
+    <div class="stitle">Classement général — Juillet 2026</div>
+    <div class="cd">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Vendeur</th>
+            <th style="text-align:right">📱 Mob</th>
+            <th style="text-align:right">🔒 G3A</th>
+            <th style="text-align:right">🛡️ Ass</th>
+            <th style="text-align:right">🎒 Acc</th>
+            <th style="text-align:right">🌐 Cyber</th>
+            <th style="text-align:right;font-weight:800;color:var(--blue)">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody id="classement-body"></tbody>
+      </table>
+    </div>
+    <div class="stitle" style="margin-top:16px">Graphique — Points cumulés</div>
+    <div class="cd"><canvas id="chart-classement" style="max-height:280px"></canvas></div>
+  </div>
+
+  <!-- DETAIL -->
+  <div class="tab-content" id="tab-detail">
+    <div class="stitle">Résultats par semaine</div>
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap" id="detail-semaine-btns"></div>
+    <div id="detail-content"></div>
+  </div>
+
+  <!-- SOURCE -->
+  <div class="tab-content" id="tab-source">
+    <div class="stitle">Source des données</div>
+    <div class="cd">
+      <h3 style="margin-bottom:8px">Synchronisation automatique</h3>
+      <div class="src-row"><span>Source</span><strong>3GWIN — rapport "Vendeurs mois"</strong></div>
+      <div class="src-row"><span>Fréquence</span><strong>Toutes les 30 minutes</strong></div>
+      <div class="src-row"><span>Dernière mise à jour</span><strong id="source-lastupdate">—</strong></div>
+      <div class="src-row"><span>Règle</span><strong>Un vendeur absent = aucune vente enregistrée</strong></div>
+      <div class="src-row"><span>KPI Star</span><strong>×2 points la semaine où il est "star"</strong></div>
+      <div style="font-size:11px;color:var(--sub);margin-top:12px">Le KPI Accessoires utilise le taux d'équipement (TAUX ACCESS) du moment, sans calcul de différence hebdomadaire (c'est un taux, pas un cumul).</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="ftr">⚽ Juillet Champion 2026 — Groupe Garcia © 2026 — Romain GP</div>
+
+<script>
+Chart.register(ChartDataLabels);
+
+// ═══════════════════════════
+// CONFIG
+// ═══════════════════════════
+const SEMAINES = [
+  { id:'S1', label:'Semaine 1', dates:'Mer. 1 → Sam. 4 juil.', star:'mobile',    emoji:'📱', debut:'2026-07-01', fin:'2026-07-04' },
+  { id:'S2', label:'Semaine 2', dates:'Lun. 6 → Sam. 11 juil.', star:'g3a',      emoji:'🔒', debut:'2026-07-06', fin:'2026-07-11' },
+  { id:'S3', label:'Semaine 3', dates:'Lun. 13 → Sam. 18 juil.', star:'assurance',emoji:'🛡️', debut:'2026-07-13', fin:'2026-07-18' },
+  { id:'S4', label:'Semaine 4', dates:'Lun. 20 → Sam. 25 juil.', star:'accessoire',emoji:'🎒', debut:'2026-07-20', fin:'2026-07-25' },
+  { id:'S5', label:'Semaine 5', dates:'Lun. 27 → Ven. 31 juil.', star:'cyber',    emoji:'🌐', debut:'2026-07-27', fin:'2026-07-31' },
+];
+// Fin de la semaine précédant S1 (baseline = 0 partoup)
+const BASELINE_DATE = '2026-06-30';
+
+const KPIS = [
+  { id:'mobile',    label:'Mobiles',     emoji:'📱', color:'#2563EB', source:'Total Mobiles', cumulatif:true },
+  { id:'g3a',       label:'G3A',         emoji:'🔒', color:'#7C3AED', source:'G3A', cumulatif:true },
+  { id:'assurance', label:'Assurance',   emoji:'🛡️', color:'#059669', source:'Assu Chubb', cumulatif:true },
+  { id:'accessoire',label:'Accessoires', emoji:'🎒', color:'#D97706', source:'TAUX ACCESS', cumulatif:false },
+  { id:'cyber',     label:'SFR Cyber',   emoji:'🌐', color:'#0891B2', source:'SFR CYBERSECU', cumulatif:true },
+];
+
+const KPI_STAR_LABELS = {
+  mobile:'📱 Mobiles','g3a':'🔒 G3A','assurance':'🛡️ Assurance','accessoire':'🎒 Accessoires','cyber':'🌐 SFR Cyber'
+};
+
+// ═══════════════════════════
+// VENDEURS (identifiants stables du dashboard, mappés par prénom vers 3GWIN)
+// ═══════════════════════════
+const VENDEURS_INIT = [
+  { id:'v1',  nom:'Anaïs'   },
+  { id:'v2',  nom:'Lucas'   },
+  { id:'v3',  nom:'Emmy'    },
+  { id:'v4',  nom:'Chloé'   },
+  { id:'v5',  nom:'Louane'  },
+  { id:'v6',  nom:'Hassène' },
+  { id:'v7',  nom:'Julie'   },
+  { id:'v8',  nom:'Mehdy'   },
+  { id:'v9',  nom:'Haval'   },
+  { id:'v10', nom:'Emilie'  },
+  { id:'v11', nom:'Nathan'  },
+  { id:'v12', nom:'Gaëtan'  },
+];
+
+// ═══════════════════════════
+// STATE — chargé depuis data.json (mis à jour automatiquement toutes les 30 min)
+// ═══════════════════════════
+let HISTORY = {};      // { "YYYY-MM-DD": { "Anaïs": {mobile,g3a,assurance,accessoire,cyber}, ... }, ... }
+let LAST_UPDATE = '';  // texte affiché
+let chartClassement = null;
+
+async function loadData() {
+  try {
+    const resp = await fetch('./data.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!resp.ok) throw new Error('data.json indisponible');
+    const json = await resp.json();
+    HISTORY = json.history || {};
+    LAST_UPDATE = json.lastUpdate || '';
+  } catch (e) {
+    HISTORY = {};
+    LAST_UPDATE = 'Aucune donnée reçue pour le moment';
+  }
+  document.getElementById('notice-lastupdate').textContent = LAST_UPDATE ? ('· ' + LAST_UPDATE) : '';
+  document.getElementById('source-lastupdate').textContent = LAST_UPDATE || '—';
+}
+
+// ═══════════════════════════
+// CALCULS — dérivés de l'historique cumulé 3GWIN
+// ═══════════════════════════
+function normalize(s) {
+  return (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+}
+
+function snapshotAsOf(vendeurNom, kpiId, dateStr) {
+  const dates = Object.keys(HISTORY).filter(d => d <= dateStr).sort();
+  for (let i = dates.length - 1; i >= 0; i--) {
+    const dayData = HISTORY[dates[i]] || {};
+    // recherche par correspondance normalisée du prénom
+    for (const key in dayData) {
+      if (normalize(key).includes(normalize(vendeurNom)) || normalize(vendeurNom).includes(normalize(key))) {
+        const v = dayData[key]?.[kpiId];
+        if (v !== undefined && v !== null) return parseFloat(v) || 0;
+      }
+    }
+  }
+  return 0;
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0,10);
+}
+
+function getScores(vendeurId, semaineId) {
+  const vendeur = VENDEURS_INIT.find(v => v.id === vendeurId);
+  const sem = SEMAINES.find(s => s.id === semaineId);
+  const idx = SEMAINES.findIndex(s => s.id === semaineId);
+  const prevFin = idx === 0 ? BASELINE_DATE : SEMAINES[idx-1].fin;
+  const today = todayStr();
+  const finEffective = sem.fin < today ? sem.fin : today;
+
+  const scores = {};
+  KPIS.forEach(k => {
+    if (k.cumulatif) {
+      const debut = snapshotAsOf(vendeur.nom, k.id, prevFin);
+      const fin = snapshotAsOf(vendeur.nom, k.id, finEffective);
+      scores[k.id] = Math.max(0, Math.round((fin - debut) * 10) / 10);
+    } else {
+      // taux : pas de différence, valeur du moment
+      scores[k.id] = Math.round(snapshotAsOf(vendeur.nom, k.id, finEffective) * 10) / 10;
+    }
+  });
+  return scores;
+}
+
+function getPoints(vendeurId, semaineId) {
+  const sem = SEMAINES.find(s => s.id === semaineId);
+  const sc = getScores(vendeurId, semaineId);
+  let pts = 0;
+  KPIS.forEach(k => {
+    const v = parseFloat(sc[k.id]) || 0;
+    const mult = k.id === sem.star ? 2 : 1;
+    pts += v * mult;
+  });
+  return Math.round(pts * 10) / 10;
+}
+
+function getTotalPoints(vendeurId) {
+  return SEMAINES.reduce((acc, s) => acc + getPoints(vendeurId, s.id), 0);
+}
+
+function getPointsParKpi(vendeurId) {
+  const res = {};
+  KPIS.forEach(k => { res[k.id] = 0; });
+  SEMAINES.forEach(sem => {
+    const sc = getScores(vendeurId, sem.id);
+    KPIS.forEach(k => {
+      const v = parseFloat(sc[k.id]) || 0;
+      const mult = k.id === sem.star ? 2 : 1;
+      res[k.id] += v * mult;
+    });
+  });
+  return res;
+}
+
+function classement() {
+  return VENDEURS_INIT.map(v => ({
+    ...v,
+    total: getTotalPoints(v.id),
+    kpis: getPointsParKpi(v.id)
+  })).sort((a,b) => {
+    if (b.total !== a.total) return b.total - a.total;
+    return a.nom.localeCompare(b.nom, 'fr');
+  });
+}
+
+// ═══════════════════════════
+// RENDER — Splash date
+// ═══════════════════════════
+document.getElementById('hdr-date').textContent = new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+// ═══════════════════════════
+// TAB NAV
+// ═══════════════════════════
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if (id==='classement') renderClassement();
+  if (id==='detail') renderDetail();
+  if (id==='vue') renderVue();
+}
+
+// ═══════════════════════════
+// VUE D'ENSEMBLE
+// ═══════════════════════════
+function renderVue() {
+  const now = new Date();
+  const cards = SEMAINES.map((s) => {
+    const start = new Date(s.debut);
+    const end = new Date(s.fin); end.setHours(23,59,59);
+    let status = 'a-venir', statusLabel = 'À venir', statusCls = 'status-a-venir';
+    if (now >= start && now <= end) { status='en-cours'; statusLabel='🟢 En cours'; statusCls='status-en-cours'; }
+    else if (now > end) { status='termine'; statusLabel='✓ Terminée'; statusCls='status-termine'; }
+
+    const kpi = KPIS.find(k => k.id === s.star);
+    return `<div class="semaine-card ${status==='en-cours'?'active':''} ${status==='a-venir'?'upcoming':''}">
+      <div class="sk-num">${s.id} — ${s.label}</div>
+      <div class="sk-dates">📅 ${s.dates}</div>
+      <div class="sk-kpi-star">${kpi.emoji} ${kpi.label} <span class="star-badge">★ ×2 PTS</span></div>
+      <div class="sk-status ${statusCls}">${statusLabel}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('semaines-cards').innerHTML = cards;
+
+  // Podium
+  const cl = classement();
+  const top3 = cl.slice(0,3);
+  const AVATAR_COLORS = ['#2563EB','#7C3AED','#0891B2','#059669','#D97706','#DC2626'];
+  const avColor = (idx) => AVATAR_COLORS[idx % AVATAR_COLORS.length];
+
+  let podiumHtml = '<div class="podium-wrap">';
+  const order = [1,0,2];
+  const blockCls = ['p2','p1','p3'];
+  const medals = ['🥈','🥇','🥉'];
+  order.forEach((idx, vi) => {
+    const v = top3[idx];
+    if (!v) return;
+    podiumHtml += `<div class="podium-col">
+      <div class="podium-avatar" style="background:${avColor(idx)}">${v.nom.substring(0,2).toUpperCase()}</div>
+      <div class="podium-name">${v.nom}</div>
+      <div class="podium-pts">${Math.round(v.total*10)/10} pts</div>
+      <div class="podium-block ${blockCls[vi]}">${medals[vi]}</div>
+    </div>`;
+  });
+  podiumHtml += '</div>';
+  document.getElementById('podium-visual').innerHTML = podiumHtml;
+
+  const top5Html = cl.slice(0,5).map((v, i) => {
+    const rkCls = i===0?'g':i===1?'s':i===2?'b':'n';
+    return `<tr>
+      <td><span class="rk ${rkCls}">${i+1}</span></td>
+      <td><strong>${v.nom}</strong></td>
+      <td style="text-align:right;font-weight:700;color:var(--blue)">${Math.round(v.total*10)/10}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('top5-body').innerHTML = top5Html || '<tr><td colspan="3" style="color:var(--sub);text-align:center;padding:16px">Aucune vente enregistrée pour le moment</td></tr>';
+}
+
+// ═══════════════════════════
+// CLASSEMENT
+// ═══════════════════════════
+function renderClassement() {
+  const cl = classement();
+
+  const rows = cl.map((v, i) => {
+    const rkCls = i===0?'g':i===1?'s':i===2?'b':'n';
+    return `<tr>
+      <td><span class="rk ${rkCls}">${i+1}</span></td>
+      <td><strong>${v.nom}</strong></td>
+      ${KPIS.map(k => `<td style="text-align:right">${Math.round(v.kpis[k.id]*10)/10||'-'}</td>`).join('')}
+      <td style="text-align:right;font-weight:800;font-size:14px;color:var(--blue)">${Math.round(v.total*10)/10}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('classement-body').innerHTML = rows || '<tr><td colspan="7" style="color:var(--sub);text-align:center;padding:20px">Aucune vente enregistrée pour le moment</td></tr>';
+
+  if (chartClassement) { chartClassement.destroy(); chartClassement = null; }
+  const top8 = cl.slice(0,8);
+  if (top8.some(v => v.total > 0)) {
+    chartClassement = new Chart(document.getElementById('chart-classement'), {
+      type: 'bar',
+      data: {
+        labels: top8.map(v => v.nom),
+        datasets: [{
+          data: top8.map(v => Math.round(v.total*10)/10),
+          backgroundColor: top8.map((v,i) => ['#2563EB','#7C3AED','#0891B2','#059669','#D97706','#DC2626'][i%6]+'CC'),
+          borderRadius: 4,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, indexAxis:'y',
+        plugins: {
+          legend:{display:false},
+          datalabels:{anchor:'end',align:'end',font:{weight:700,size:11,family:'Plus Jakarta Sans'},color:'#0F1419',formatter:v=>v+' pts'}
+        },
+        scales:{
+          x:{display:false,grid:{display:false}},
+          y:{grid:{display:false},ticks:{font:{size:11,weight:600,family:'Plus Jakarta Sans'}}}
+        }
+      }
+    });
+  }
+}
+
+// ═══════════════════════════
+// DETAIL PAR SEMAINE
+// ═══════════════════════════
+let currentDetailSem = 'S1';
+function renderDetail() {
+  const btns = SEMAINES.map(s => `<button class="btn-primary" style="padding:8px 16px;border-radius:8px;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;${currentDetailSem===s.id?'background:var(--blue);color:#fff;border:none;':'background:var(--bg);color:var(--blue);border:1px solid var(--blue);'}" onclick="selectDetailSem('${s.id}')">${s.emoji} ${s.id}</button>`).join('');
+  document.getElementById('detail-semaine-btns').innerHTML = btns;
+  renderDetailContent();
+}
+
+function selectDetailSem(id) {
+  currentDetailSem = id;
+  renderDetail();
+}
+
+function renderDetailContent() {
+  const sem = SEMAINES.find(s => s.id === currentDetailSem);
+  const kpiStar = KPIS.find(k => k.id === sem.star);
+
+  const ranking = VENDEURS_INIT.map(v => ({
+    ...v,
+    pts: getPoints(v.id, currentDetailSem),
+    scores: getScores(v.id, currentDetailSem)
+  })).sort((a,b) => {
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    return a.nom.localeCompare(b.nom, 'fr');
+  });
+
+  const rows = ranking.map((v, i) => {
+    const rkCls = i===0?'g':i===1?'s':i===2?'b':'n';
+    return `<tr>
+      <td><span class="rk ${rkCls}">${i+1}</span></td>
+      <td><strong>${v.nom}</strong></td>
+      ${KPIS.map(k => {
+        const raw = parseFloat(v.scores[k.id])||0;
+        const isStar = k.id === sem.star;
+        return `<td style="text-align:right;${isStar?'font-weight:700;color:var(--blue)':''}">${raw||'-'}${isStar?' ★':''}</td>`;
+      }).join('')}
+      <td style="text-align:right;font-weight:800;color:var(--blue)">${v.pts}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('detail-content').innerHTML = `
+    <div class="cd">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="font-size:28px">${sem.emoji}</div>
+        <div>
+          <div style="font-size:15px;font-weight:800">${sem.label} — ${sem.dates}</div>
+          <div style="font-size:11px;color:var(--sub)">KPI Star : <strong style="color:var(--blue)">${kpiStar.emoji} ${kpiStar.label} × 2 points</strong></div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Vendeur</th>
+            ${KPIS.map(k => `<th style="text-align:right">${k.emoji} ${k.label}${k.id===sem.star?' ★':''}</th>`).join('')}
+            <th style="text-align:right">Pts</th>
+          </tr>
+        </thead>
+        <tbody>${rows||'<tr><td colspan="7" style="color:var(--sub);text-align:center;padding:20px">Aucune vente enregistrée pour cette semaine</td></tr>'}</tbody>
+      </table>
+    </div>`;
+}
+
+// ═══════════════════════════
+// INIT
+// ═══════════════════════════
+(async function init() {
+  await loadData();
+  renderVue();
+
+  setTimeout(() => {
+    document.getElementById('splash').classList.add('hide');
+    document.getElementById('hdr').classList.add('show');
+    document.getElementById('nav').classList.add('show');
+    document.getElementById('mn').classList.add('show');
+  }, 1200);
+})();
+</script>
+</body>
+</html>
