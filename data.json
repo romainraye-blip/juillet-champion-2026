@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 01/07/2026 à 18:38 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 01/07/2026 à 19:10 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -131,18 +131,18 @@
         "accessoire": 17.32
       },
       "Julie": {
-        "mobile": 0,
+        "mobile": 1,
         "g3a": 0,
         "assurance": 0,
         "cyber": 1,
-        "accessoire": 0
+        "accessoire": 25.67
       },
       "Mehdy": {
-        "mobile": 2,
+        "mobile": 3,
         "g3a": 2,
         "assurance": 1,
         "cyber": 0,
-        "accessoire": 7
+        "accessoire": 4.67
       },
       "Haval": {
         "mobile": 3,
@@ -152,11 +152,11 @@
         "accessoire": 8.56
       },
       "Emilie": {
-        "mobile": 3,
-        "g3a": 3,
+        "mobile": 4,
+        "g3a": 4,
         "assurance": 0,
         "cyber": 0,
-        "accessoire": 32.3
+        "accessoire": 25.84
       },
       "Nathan": {
         "mobile": 0,
