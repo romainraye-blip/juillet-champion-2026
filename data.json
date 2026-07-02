@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 02/07/2026 à 14:06 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 02/07/2026 à 15:18 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -178,29 +178,29 @@
         "mobile": 0,
         "g3a": 0,
         "assurance": 0,
-        "accessoire": 0,
-        "cyber": 0
+        "cyber": 0,
+        "accessoire": 0
       },
       "Lucas": {
         "mobile": 2,
         "g3a": 1,
         "assurance": 1,
-        "accessoire": 37.58,
-        "cyber": 1
+        "cyber": 1,
+        "accessoire": 37.58
       },
       "Emmy": {
         "mobile": 1,
         "g3a": 0,
         "assurance": 0,
-        "accessoire": 19.72,
-        "cyber": 0
+        "cyber": 0,
+        "accessoire": 19.72
       },
       "Chloé": {
         "mobile": 0,
         "g3a": 0,
         "assurance": 0,
-        "accessoire": 0,
-        "cyber": 0
+        "cyber": 0,
+        "accessoire": 0
       },
       "Louane": {
         "mobile": 0,
@@ -213,36 +213,36 @@
         "mobile": 3,
         "g3a": 2,
         "assurance": 2,
-        "accessoire": 20.75,
-        "cyber": 4
+        "cyber": 4,
+        "accessoire": 20.75
       },
       "Julie": {
         "mobile": 2,
         "g3a": 1,
         "assurance": 1,
-        "accessoire": 54.48,
-        "cyber": 2
+        "cyber": 2,
+        "accessoire": 54.48
       },
       "Mehdy": {
         "mobile": 3,
         "g3a": 2,
         "assurance": 1,
-        "accessoire": 3.5,
-        "cyber": 0
+        "cyber": 0,
+        "accessoire": 3.5
       },
       "Haval": {
         "mobile": 4,
         "g3a": 3,
         "assurance": 2,
-        "accessoire": 28.43,
-        "cyber": 1
+        "cyber": 1,
+        "accessoire": 28.43
       },
       "Emilie": {
         "mobile": 4,
         "g3a": 4,
         "assurance": 0,
-        "accessoire": 21.53,
-        "cyber": 0
+        "cyber": 0,
+        "accessoire": 21.53
       },
       "Nathan": {
         "mobile": 0,
