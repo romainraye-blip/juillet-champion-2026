@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 01/07/2026 (heure de Paris) · Source 3GWIN · mobile = Total Mobiles Hors W2S",
+  "lastUpdate": "Vérifié le 02/07/2026 16:32 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -186,7 +186,7 @@
         "g3a": 1,
         "assurance": 1,
         "cyber": 1,
-        "accessoire": 37.58
+        "accessoire": 48.67
       },
       "Emmy": {
         "mobile": 1,
@@ -214,7 +214,7 @@
         "g3a": 3,
         "assurance": 2,
         "cyber": 4,
-        "accessoire": 17.29
+        "accessoire": 20.96
       },
       "Julie": {
         "mobile": 2,
@@ -240,8 +240,8 @@
       "Emilie": {
         "mobile": 4,
         "g3a": 4,
-        "assurance": 0,
-        "cyber": 0,
+        "assurance": 1,
+        "cyber": 1,
         "accessoire": 21.53
       },
       "Nathan": {
