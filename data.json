@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 02/07/2026 à 15:38 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 01/07/2026 (heure de Paris) · Source 3GWIN · mobile = Total Mobiles Hors W2S",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -92,29 +92,29 @@
         "mobile": 0,
         "g3a": 0,
         "assurance": 0,
-        "cyber": 0,
-        "accessoire": 0
+        "accessoire": 0,
+        "cyber": 0
       },
       "Lucas": {
-        "mobile": 0,
-        "g3a": 0,
-        "assurance": 0,
-        "cyber": 0,
-        "accessoire": 0
+        "mobile": 1,
+        "g3a": 1,
+        "assurance": 1,
+        "accessoire": 37.58,
+        "cyber": 1
       },
       "Emmy": {
-        "mobile": 0,
+        "mobile": 1,
         "g3a": 0,
         "assurance": 0,
-        "accessoire": 0,
+        "accessoire": 19.72,
         "cyber": 0
       },
       "Chloé": {
         "mobile": 0,
         "g3a": 0,
         "assurance": 0,
-        "cyber": 0,
-        "accessoire": 0
+        "accessoire": 0,
+        "cyber": 0
       },
       "Louane": {
         "mobile": 0,
@@ -124,39 +124,39 @@
         "cyber": 0
       },
       "Hassène": {
+        "mobile": 3,
+        "g3a": 3,
+        "assurance": 2,
+        "accessoire": 17.29,
+        "cyber": 4
+      },
+      "Julie": {
         "mobile": 2,
         "g3a": 1,
         "assurance": 1,
-        "cyber": 3,
-        "accessoire": 17.32
-      },
-      "Julie": {
-        "mobile": 1,
-        "g3a": 0,
-        "assurance": 0,
-        "cyber": 1,
-        "accessoire": 25.67
+        "accessoire": 54.48,
+        "cyber": 2
       },
       "Mehdy": {
         "mobile": 3,
         "g3a": 2,
         "assurance": 1,
-        "cyber": 0,
-        "accessoire": 3.5
+        "accessoire": 3.5,
+        "cyber": 0
       },
       "Haval": {
         "mobile": 3,
-        "g3a": 2,
+        "g3a": 3,
         "assurance": 2,
-        "cyber": 0,
-        "accessoire": 8.56
+        "accessoire": 28.43,
+        "cyber": 1
       },
       "Emilie": {
         "mobile": 4,
         "g3a": 4,
         "assurance": 0,
-        "cyber": 0,
-        "accessoire": 25.84
+        "accessoire": 21.53,
+        "cyber": 0
       },
       "Nathan": {
         "mobile": 0,
