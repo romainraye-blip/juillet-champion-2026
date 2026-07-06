@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 02/07/2026 23:11 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 06/07/2026 à 09:09 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -257,6 +257,92 @@
         "assurance": 0,
         "cyber": 0,
         "accessoire": 0
+      }
+    },
+    "2026-07-06": {
+      "Anaïs": {
+        "mobile": 3,
+        "g3a": 2,
+        "assurance": 0,
+        "cyber": 3,
+        "accessoire": 6.52
+      },
+      "Lucas": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2,
+        "accessoire": 44.23
+      },
+      "Emmy": {
+        "mobile": 5,
+        "g3a": 2,
+        "assurance": 3,
+        "cyber": 2,
+        "accessoire": 15.93
+      },
+      "Chloé": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 0,
+        "cyber": 0,
+        "accessoire": 32.63
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "accessoire": 0,
+        "cyber": 0
+      },
+      "Hassène": {
+        "mobile": 10,
+        "g3a": 8,
+        "assurance": 3,
+        "cyber": 6,
+        "accessoire": 15.36
+      },
+      "Julie": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2,
+        "accessoire": 36.32
+      },
+      "Mehdy": {
+        "mobile": 7,
+        "g3a": 4,
+        "assurance": 2,
+        "cyber": 0,
+        "accessoire": 9.03
+      },
+      "Haval": {
+        "mobile": 7,
+        "g3a": 7,
+        "assurance": 3,
+        "cyber": 3,
+        "accessoire": 28.04
+      },
+      "Emilie": {
+        "mobile": 8,
+        "g3a": 7,
+        "assurance": 4,
+        "cyber": 2,
+        "accessoire": 33.68
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "accessoire": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0,
+        "accessoire": 30.52
       }
     }
   }
