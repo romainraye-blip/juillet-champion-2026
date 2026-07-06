@@ -169,8 +169,7 @@ tbody tr:last-child td{border-bottom:none}
             <th style="text-align:right">📱 Mob</th>
             <th style="text-align:right">🔒 G3A</th>
             <th style="text-align:right">🛡️ Ass</th>
-            <th style="text-align:right">🎒 Acc</th>
-            <th style="text-align:right">🌐 Cyber</th>
+                        <th style="text-align:right">🌐 Cyber</th>
             <th style="text-align:right;font-weight:800;color:var(--blue)">TOTAL</th>
           </tr>
         </thead>
@@ -198,7 +197,7 @@ tbody tr:last-child td{border-bottom:none}
       <div class="src-row"><span>Dernière mise à jour</span><strong id="source-lastupdate">—</strong></div>
       <div class="src-row"><span>Règle</span><strong>Un vendeur absent = aucune vente enregistrée</strong></div>
       <div class="src-row"><span>KPI Star</span><strong>×2 points la semaine où il est "star"</strong></div>
-      <div style="font-size:11px;color:var(--sub);margin-top:12px">Le KPI Accessoires utilise le taux d'équipement (TAUX ACCESS) du moment, sans calcul de différence hebdomadaire (c'est un taux, pas un cumul).</div>
+      
     </div>
   </div>
 
@@ -224,12 +223,11 @@ const KPIS = [
   { id:'mobile',    label:'Mobiles',     emoji:'📱', color:'#2563EB', source:'Total Mobiles Hors W2S', cumulatif:true },
   { id:'g3a',       label:'G3A',         emoji:'🔒', color:'#7C3AED', source:'G3A', cumulatif:true },
   { id:'assurance', label:'Assurance',   emoji:'🛡️', color:'#059669', source:'Assu Chubb', cumulatif:true },
-  { id:'accessoire',label:'Accessoires', emoji:'🎒', color:'#D97706', source:'TAUX ACCESS', cumulatif:false },
   { id:'cyber',     label:'SFR Cyber',   emoji:'🌐', color:'#0891B2', source:'SFR CYBERSECU', cumulatif:true },
 ];
 
 const KPI_STAR_LABELS = {
-  mobile:'📱 Mobiles','g3a':'🔒 G3A','assurance':'🛡️ Assurance','accessoire':'🎒 Accessoires','cyber':'🌐 SFR Cyber'
+  mobile:'📱 Mobiles','g3a':'🔒 G3A','assurance':'🛡️ Assurance','cyber':'🌐 SFR Cyber'
 };
 
 // ═══════════════════════════
@@ -252,7 +250,7 @@ const VENDEURS_INIT = [
 // ═══════════════════════════
 // STATE — chargé depuis data.json (mis à jour automatiquement toutes les 30 min)
 // ═══════════════════════════
-let HISTORY = {};      // { "YYYY-MM-DD": { "Anaïs": {mobile,g3a,assurance,accessoire,cyber}, ... }, ... }
+let HISTORY = {};      // { "YYYY-MM-DD": { "Anaïs": {mobile,g3a,assurance,cyber}, ... }, ... }
 let LAST_UPDATE = '';  // texte affiché
 let chartClassement = null;
 
