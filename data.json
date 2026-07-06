@@ -1,1 +1,369 @@
-undefined
+{
+  "lastUpdate": "Vérifié le 06/07/2026 à 15:57 (heure de Paris) · Source 3GWIN",
+  "history": {
+    "2026-06-30": {
+      "Anaïs": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Lucas": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Emmy": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Chloé": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Hassène": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Julie": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Mehdy": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Haval": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Emilie": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      }
+    },
+    "2026-07-01": {
+      "Anaïs": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Lucas": {
+        "mobile": 1,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 1
+      },
+      "Emmy": {
+        "mobile": 1,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Chloé": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Hassène": {
+        "mobile": 3,
+        "g3a": 3,
+        "assurance": 2,
+        "cyber": 4
+      },
+      "Julie": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2
+      },
+      "Mehdy": {
+        "mobile": 3,
+        "g3a": 2,
+        "assurance": 1,
+        "cyber": 0
+      },
+      "Haval": {
+        "mobile": 3,
+        "g3a": 3,
+        "assurance": 2,
+        "cyber": 1
+      },
+      "Emilie": {
+        "mobile": 4,
+        "g3a": 4,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      }
+    },
+    "2026-07-02": {
+      "Anaïs": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Lucas": {
+        "mobile": 1,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 1
+      },
+      "Emmy": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Chloé": {
+        "mobile": 1,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Hassène": {
+        "mobile": 5,
+        "g3a": 4,
+        "assurance": 2,
+        "cyber": 5
+      },
+      "Julie": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2
+      },
+      "Mehdy": {
+        "mobile": 3,
+        "g3a": 2,
+        "assurance": 1,
+        "cyber": 0
+      },
+      "Haval": {
+        "mobile": 3,
+        "g3a": 3,
+        "assurance": 2,
+        "cyber": 1
+      },
+      "Emilie": {
+        "mobile": 4,
+        "g3a": 4,
+        "assurance": 1,
+        "cyber": 1
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      }
+    },
+    "2026-07-06": {
+      "Anaïs": {
+        "mobile": 5,
+        "g3a": 3,
+        "assurance": 2,
+        "cyber": 3
+      },
+      "Lucas": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 3
+      },
+      "Emmy": {
+        "mobile": 5,
+        "g3a": 2,
+        "assurance": 3,
+        "cyber": 2
+      },
+      "Chloé": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 1
+      },
+      "Hassène": {
+        "mobile": 10,
+        "g3a": 8,
+        "assurance": 3,
+        "cyber": 6
+      },
+      "Julie": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2
+      },
+      "Mehdy": {
+        "mobile": 7,
+        "g3a": 4,
+        "assurance": 2,
+        "cyber": 0
+      },
+      "Haval": {
+        "mobile": 7,
+        "g3a": 7,
+        "assurance": 3,
+        "cyber": 3
+      },
+      "Emilie": {
+        "mobile": 8,
+        "g3a": 7,
+        "assurance": 4,
+        "cyber": 2
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      }
+    },
+    "2026-07-05": {
+      "Anaïs": {
+        "mobile": 3,
+        "g3a": 2,
+        "assurance": 0,
+        "cyber": 3
+      },
+      "Lucas": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2
+      },
+      "Emmy": {
+        "mobile": 5,
+        "g3a": 2,
+        "assurance": 3,
+        "cyber": 2
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Hassène": {
+        "mobile": 10,
+        "g3a": 8,
+        "assurance": 3,
+        "cyber": 6
+      },
+      "Julie": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "cyber": 2
+      },
+      "Mehdy": {
+        "mobile": 7,
+        "g3a": 4,
+        "assurance": 2,
+        "cyber": 0
+      },
+      "Haval": {
+        "mobile": 7,
+        "g3a": 7,
+        "assurance": 3,
+        "cyber": 3
+      },
+      "Emilie": {
+        "mobile": 8,
+        "g3a": 7,
+        "assurance": 4,
+        "cyber": 2
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "cyber": 0
+      }
+    }
+  }
+}
