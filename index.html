@@ -109,7 +109,7 @@ tbody tr:last-child td{border-bottom:none}
   </div>
   <div class="sp-line"></div>
   <div class="sp-kpis">
-    <div class="sp-kpi"><div class="sp-kpi-val">5</div><div class="sp-kpi-label">Semaines</div></div>
+    <div class="sp-kpi"><div class="sp-kpi-val">4</div><div class="sp-kpi-label">Semaines</div></div>
     <div class="sp-kpi"><div class="sp-kpi-val">5</div><div class="sp-kpi-label">KPIs</div></div>
     <div class="sp-kpi"><div class="sp-kpi-val">🥇🥈🥉</div><div class="sp-kpi-label">Podium</div></div>
   </div>
@@ -138,7 +138,7 @@ tbody tr:last-child td{border-bottom:none}
     <div class="notice sync" id="sync-notice">⚽ <strong>JUILLET CHAMPION</strong> — Données synchronisées automatiquement depuis 3GWIN toutes les 30 minutes. <span id="notice-lastupdate"></span></div>
 
     <div class="stitle">Programme des semaines</div>
-    <div class="g5" id="semaines-cards"></div>
+    <div class="g4" id="semaines-cards"></div>
 
     <div class="stitle" style="margin-top:20px">Podium provisoire</div>
     <div class="g2">
@@ -213,15 +213,13 @@ Chart.register(ChartDataLabels);
 // CONFIG
 // ═══════════════════════════
 const SEMAINES = [
-  { id:'S1', label:'Semaine 1', dates:'Mer. 1 → Sam. 4 juil.', star:'mobile',    emoji:'📱', debut:'2026-07-01', fin:'2026-07-04' },
-  { id:'S2', label:'Semaine 2', dates:'Lun. 6 → Sam. 11 juil.', star:'g3a',      emoji:'🔒', debut:'2026-07-06', fin:'2026-07-11' },
-  { id:'S3', label:'Semaine 3', dates:'Lun. 13 → Sam. 18 juil.', star:'assurance',emoji:'🛡️', debut:'2026-07-13', fin:'2026-07-18' },
-  { id:'S4', label:'Semaine 4', dates:'Lun. 20 → Sam. 25 juil.', star:'accessoire',emoji:'🎒', debut:'2026-07-20', fin:'2026-07-25' },
-  { id:'S5', label:'Semaine 5', dates:'Lun. 27 → Ven. 31 juil.', star:'cyber',    emoji:'🌐', debut:'2026-07-27', fin:'2026-07-31' },
+  { id:'S1', label:'Semaine 1', dates:'Lun. 6 \u2192 Sam. 11 juil.', star:'mobile',    emoji:'\uD83D\uDCF1', debut:'2026-07-06', fin:'2026-07-11' },
+  { id:'S2', label:'Semaine 2', dates:'Lun. 13 \u2192 Sam. 18 juil.', star:'assurance',emoji:'\uD83D\uDEE1\uFE0F', debut:'2026-07-13', fin:'2026-07-18' },
+  { id:'S3', label:'Semaine 3', dates:'Lun. 20 \u2192 Sam. 25 juil.', star:'g3a',      emoji:'\uD83D\uDD12', debut:'2026-07-20', fin:'2026-07-25' },
+  { id:'S4', label:'Semaine 4', dates:'Lun. 27 \u2192 Ven. 31 juil.', star:'cyber',    emoji:'\uD83C\uDF10', debut:'2026-07-27', fin:'2026-07-31' },
 ];
-// Fin de la semaine précédant S1 (baseline = 0 partoup)
-const BASELINE_DATE = '2026-06-30';
-
+// Challenge de 4 semaines demarre le 06/07/2026 : baseline = veille du demarrage
+const BASELINE_DATE = '2026-07-05';
 const KPIS = [
   { id:'mobile',    label:'Mobiles',     emoji:'📱', color:'#2563EB', source:'Total Mobiles Hors W2S', cumulatif:true },
   { id:'g3a',       label:'G3A',         emoji:'🔒', color:'#7C3AED', source:'G3A', cumulatif:true },
@@ -241,7 +239,6 @@ const VENDEURS_INIT = [
   { id:'v1',  nom:'Anaïs'   },
   { id:'v2',  nom:'Lucas'   },
   { id:'v3',  nom:'Emmy'    },
-  { id:'v4',  nom:'Chloé'   },
   { id:'v5',  nom:'Louane'  },
   { id:'v6',  nom:'Hassène' },
   { id:'v7',  nom:'Julie'   },
