@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 06/07/2026 à 09:09 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Nouveau challenge 4 semaines démarré le 06/07/2026 · Baseline fixée le 05/07/2026 · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -343,6 +343,85 @@
         "assurance": 0,
         "cyber": 0,
         "accessoire": 30.52
+      }
+    },
+    "2026-07-05": {
+      "Anaïs": {
+        "mobile": 3,
+        "g3a": 2,
+        "assurance": 0,
+        "accessoire": 6.52,
+        "cyber": 3
+      },
+      "Lucas": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "accessoire": 44.23,
+        "cyber": 2
+      },
+      "Emmy": {
+        "mobile": 5,
+        "g3a": 2,
+        "assurance": 3,
+        "accessoire": 15.93,
+        "cyber": 2
+      },
+      "Louane": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "accessoire": 0,
+        "cyber": 0
+      },
+      "Hassène": {
+        "mobile": 10,
+        "g3a": 8,
+        "assurance": 3,
+        "accessoire": 15.36,
+        "cyber": 6
+      },
+      "Julie": {
+        "mobile": 2,
+        "g3a": 1,
+        "assurance": 1,
+        "accessoire": 36.32,
+        "cyber": 2
+      },
+      "Mehdy": {
+        "mobile": 7,
+        "g3a": 4,
+        "assurance": 2,
+        "accessoire": 9.03,
+        "cyber": 0
+      },
+      "Haval": {
+        "mobile": 7,
+        "g3a": 7,
+        "assurance": 3,
+        "accessoire": 28.04,
+        "cyber": 3
+      },
+      "Emilie": {
+        "mobile": 8,
+        "g3a": 7,
+        "assurance": 4,
+        "accessoire": 33.68,
+        "cyber": 2
+      },
+      "Nathan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "accessoire": 0,
+        "cyber": 0
+      },
+      "Gaëtan": {
+        "mobile": 0,
+        "g3a": 0,
+        "assurance": 0,
+        "accessoire": 30.52,
+        "cyber": 0
       }
     }
   }
