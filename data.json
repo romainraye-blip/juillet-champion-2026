@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 10/07/2026 à 16:06 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 10/07/2026 à 17:04 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -583,10 +583,10 @@
         "cyber": 7
       },
       "Emmy": {
-        "mobile": 8,
-        "g3a": 4,
+        "mobile": 9,
+        "g3a": 5,
         "assurance": 6,
-        "cyber": 7
+        "cyber": 9
       },
       "Louane": {
         "mobile": 6,
@@ -613,9 +613,9 @@
         "cyber": 1
       },
       "Haval": {
-        "mobile": 15,
-        "g3a": 15,
-        "assurance": 7,
+        "mobile": 16,
+        "g3a": 16,
+        "assurance": 8,
         "cyber": 7
       },
       "Emilie": {
