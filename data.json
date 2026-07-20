@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 20/07/2026 à 14:20 (heure de Paris) · Source 3GWIN + export S1/S2 (correctif semaines)",
+  "lastUpdate": "Vérifié le 20/07/2026 à 15:30 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -855,14 +855,14 @@
         "cyber": 14
       },
       "Emmy": {
-        "mobile": 15,
-        "g3a": 9,
+        "mobile": 16,
+        "g3a": 10,
         "assurance": 8,
         "cyber": 14
       },
       "Louane": {
-        "mobile": 13,
-        "g3a": 6,
+        "mobile": 14,
+        "g3a": 7,
         "assurance": 6,
         "cyber": 3
       },
