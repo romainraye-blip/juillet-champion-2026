@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "Vérifié le 27/07/2026 à 18:29 (heure de Paris) · Source 3GWIN",
+  "lastUpdate": "Vérifié le 28/07/2026 à 08:51 (heure de Paris) · Source 3GWIN",
   "history": {
     "2026-06-30": {
       "Anaïs": {
@@ -1294,6 +1294,68 @@
       }
     },
     "2026-07-27": {
+      "Anaïs": {
+        "mobile": 24,
+        "g3a": 22,
+        "assurance": 13,
+        "cyber": 16
+      },
+      "Lucas": {
+        "mobile": 15,
+        "g3a": 10,
+        "assurance": 3,
+        "cyber": 17
+      },
+      "Emmy": {
+        "mobile": 20,
+        "g3a": 14,
+        "assurance": 10,
+        "cyber": 19
+      },
+      "Louane": {
+        "mobile": 19,
+        "g3a": 9,
+        "assurance": 9,
+        "cyber": 8
+      },
+      "Hassène": {
+        "mobile": 22,
+        "g3a": 15,
+        "assurance": 7,
+        "cyber": 10
+      },
+      "Julie": {
+        "mobile": 10,
+        "g3a": 7,
+        "assurance": 3,
+        "cyber": 10
+      },
+      "Mehdy": {
+        "mobile": 23,
+        "g3a": 9,
+        "assurance": 2,
+        "cyber": 3
+      },
+      "Haval": {
+        "mobile": 27,
+        "g3a": 25,
+        "assurance": 12,
+        "cyber": 16
+      },
+      "Emilie": {
+        "mobile": 26,
+        "g3a": 16,
+        "assurance": 11,
+        "cyber": 10
+      },
+      "Nathan": {
+        "mobile": 10,
+        "g3a": 3,
+        "assurance": 1,
+        "cyber": 1
+      }
+    },
+    "2026-07-28": {
       "Anaïs": {
         "mobile": 24,
         "g3a": 22,
